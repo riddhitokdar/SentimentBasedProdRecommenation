@@ -1,0 +1,44 @@
+<!doctype html>
+<title>SBPRS</title>
+<body> 
+    <div class="header">
+        <div class="header">
+            <h1 style="text-align:center;">Sentiment Based Product Recommendation System</h1>
+            <h3 style="text-align:center;">Developed by: Riddhi Tokdar</h3>
+    </div>
+
+    <br>
+
+    <div class="main">
+        <form style="text-align: center" action="{{url_for('recommendProducts')}}" method="post">
+            <label for="username">Enter Username</label>
+            <br>
+            <br>
+            <input type="text" class="textbox" name="username" placeholder="Enter Username">
+            <br>
+            <br>
+            <input type="submit" class="submitbutton" value="Recommend Products">
+            <br>
+            <a href="{{url_for('allUsernames')}}" target="_blank">Available Users</a>
+        </form> 
+        <!-- Displaying the Recommendations -->
+        <br>
+    </div>
+
+    <br>
+    <br>
+    <!-- Displaying the Recommendations -->
+
+    <div>
+        <center>
+            <h2>{{titles|safe}}</h2>
+        </center>
+        
+    </div>
+    <br>
+    <div style="text-align: center" class="result">
+        
+        <center>{{ productsTable|safe}}</center>
+    </div>
+</body>
+
