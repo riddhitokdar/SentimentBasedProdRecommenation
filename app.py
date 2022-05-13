@@ -46,5 +46,9 @@ def allUsernames():
     # Rendering the page
     return render_template('allusernames.html', usernameTable = usernameTable, titles = table_title )
 
+if __name__ == '__main__':
+    #print('Sentiment Based Product Recommendation System')
+    app.run(debug = False)
+
 
 
